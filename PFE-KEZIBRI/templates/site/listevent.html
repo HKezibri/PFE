@@ -1,0 +1,47 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Evénements</strong><hr class="line"> </h3>
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Catégories des événements</h5>
+    
+    <div class="card" style="width: 18rem;">
+      {%for c in categ%}
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{c.titre}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+</div>
+<div class="rightside"> <br><br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb"style="background-color:white;">
+      <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Evennements</li>
+    </ol>
+  </nav><br>
+  <h1>Evénements</h1><hr>
+                    {%for e in events%}
+                    <div class="row no-gutters">
+                      <div class="col-md-4" style="background-color: #17a2b8;">
+                        <div class="col-md-3 mt-3" style="padding-top: 20px; width: 99%;"><br>
+                          <h1 class="text-center p-12" style="color: white;">{{e.date_debut}}</h1>
+                        </div>
+                          
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{e.titre}}</h5>
+                          <p class="card-text"></p>
+                          <p class="card-text"><small class="text-muted">{{e.courte_description}}</small></p>
+                         
+                          <a href="{{url_for('detailsevenn',oid=e.id)}}"><p class="card-text" id="getid"><small class="text-muted">voir plus >> </small></p></a>
+                        </div>
+                      </div>
+                    </div>
+                    {%endfor%}
+</div>
+
+{%endblock%}

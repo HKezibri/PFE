@@ -1,0 +1,51 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Evénements/ booking</strong><hr class="line"> </h3>
+
+</div>
+
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Mon Compte</h5>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Profil</li>
+          <li class="list-group-item">Changer mot de passe</li>
+          <a href="/evennement/liste-reservation"><li class="list-group-item">My Booking</li></a>
+          <a href="{{url_for('deconn')}}"><li class="list-group-item">Se deconnecter</li></a>
+        </ul>
+      </div>
+</div>
+<div class="rightside"> <br><br>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb"style="background-color:white;">
+          <li class="breadcrumb-item" ><a href="#" ><i class="fas fa-home"> </i> Acceuil</a></li>
+          <li class="breadcrumb-item active" aria-current="page"> Mon Compte</li>
+          <li class="breadcrumb-item active" aria-current="page">Reservation</li>
+        </ol>
+      </nav>
+      <h3 class="px-2"> Reservations</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre de l'evennement</th>
+            <th>date de Reservation</th>
+            <th>etat de la Reservation</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <th>1212</th>
+            <th>1212</th>
+            <th>1212</th>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+
+{%endblock%}

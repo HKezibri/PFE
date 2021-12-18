@@ -1,0 +1,127 @@
+{% extends "navfooter.html" %}
+{% block page %}
+
+            <div class="column sllider p-0">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                   
+                    <div class="carousel-inner">
+                      
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/static/assets/slider-pic.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>THE 8TH EDITION OF THE ARABIC SHORT STORY MEETING</h5>
+                          <p>Commence le : 12 / 12 / 2019   Se termine le : 15 / 12 / 2019 </p>
+                         
+                        </div>
+                      </div>
+                      {%for p in para%}
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="/static/assets/slider-pic.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>{{p.slide_title}}</h5>
+                          <p>{{p.slide_title2}}</p>
+                        </div>
+                      </div>
+                      
+                      {%endfor%}
+                    </div>
+                      
+                      
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+            </div>
+
+            
+                <div class="leftside-one">
+                    <div class="actual">
+                        <h3>ACTUALITÉS</h3>
+                        {%for e in events%}
+                        <a href="{{url_for('detailsevenn',oid=e.id)}}"> <p id="getid"> {{e.titre}}</a>  <br> 
+                        </p>
+                        {%endfor%}
+                        
+                    </div>
+                      <br><br><br><br><br><br><br><br>
+                      <h3>Catégories des événements</h3>
+                        
+                      <div class="card" style="width: 18rem;">
+                        {%for c in categ%}
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{c.titre}}</li>
+                          </ul>
+                          {%endfor%}
+                        </div>
+                    
+
+                </div>
+
+
+            
+                
+                  <div class="rightside "><br>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb"style="background-color:white;">
+                        <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+                      </ol>
+                    </nav>
+                    <br><br>
+                    <h1>Evénements</h1><hr>
+                    {%for e in events%}
+                    <div class="row no-gutters">
+                      <div class="col-md-4" style="background-color: #17a2b8;">
+                        <div class="col-md-3 mt-3" style="padding-top: 20px; width: 99%;"><br>
+                          <h1 class="text-center p-12" style="color: white;">{{e.date_debut}}</h1>
+                        </div>
+                          
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{e.titre}}</h5>
+                          <p class="card-text"></p>
+                          <p class="card-text"><small class="text-muted">{{e.courte_description}}</small></p>
+                         
+                          <a href="{{url_for('detailsevenn',oid=e.id)}}"><p class="card-text" id="getid"><small class="text-muted">voir plus >> </small></p></a>
+                        </div>
+                      </div>
+                    </div>
+                    {%endfor%}
+                    <br><br><br>
+                    <h1>Speakers </h1> <hr>
+                    <div class="container-card">
+                      {%for s in speakers %}
+                        <div class="card" style="width:200px">
+                          <img class="card-img-top" src="/static/assets/avatar1.PNG" alt="Card image" style="width:100%">
+                          <div class="card-body">
+                            <h4 class="card-title">{{s.profession}}.{{s.nom}}</h4>
+                            <p class="card-text"> <strong>Universite:</strong> {{s.uni}}</p>
+                            <p class="card-text"><strong>Titre:</strong> {{s.titre}}</p>
+                            
+                          </div>
+                        </div>
+                        {%endfor%}
+                        
+                      </div>
+                      <a href="/speakers"><p class="card-text" id="getid"><small class="text-muted">Afficher tous >> </small></p></a>
+
+                    
+
+                  
+                  </div>
+
+    {%endblock%}          
+
+
+        

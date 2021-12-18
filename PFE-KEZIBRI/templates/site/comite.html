@@ -1,0 +1,62 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Comite Scientifique</strong><hr class="line"> </h3>
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Catégories des événements</h5>
+    
+    <div class="card" style="width: 18rem;">
+      {%for c in categ%}
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{c.titre}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+</div>
+<div class="rightside"> <br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb"style="background-color:white;">
+      <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Comite Scientifique</li>
+    </ol>
+  </nav><br>
+    <h1>Comite Scientifique National</h1><hr><br><br><br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nom Complet</th>
+            <th scope="col">Universite</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in comite_n%}
+          <tr>
+            <td>{{n.nom}}</td>
+            <td>{{n.universite}}</td>
+          </tr>  
+          {%endfor%}      
+        </tbody>
+      </table><br><br><br>
+      <h1>Comite Scientifique International</h1><hr><br><br><br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nom Complet</th>
+            <th scope="col"> Universite</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in comite_i%}
+          <tr>
+            <td>{{i.nom}}</td>
+            <td>{{i.universite}}</td>
+          </tr> 
+          {%endfor%}       
+        </tbody>
+      </table>
+
+    </div>
+
+{%endblock%}

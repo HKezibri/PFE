@@ -1,0 +1,42 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Speakers</strong><hr class="line"> </h3>
+
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Catégories des événements</h5>
+    
+    <div class="card" style="width: 18rem;">
+      {%for c in categ%}
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{c.titre}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+</div>
+<div class="rightside"> <br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb"style="background-color:white;">
+      <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Speakers</li>
+    </ol>
+  </nav><br>
+    <h1>Speakers </h1> <hr>
+    <div class="container-card">
+      {%for s in speakers %}
+        <div class="card" style="width:200px">
+          <img class="card-img-top" src="/static/assets/avatar1.PNG" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">{{s.profession}}.{{s.nom}}</h4>
+            <p class="card-text"> <strong>Universite:</strong> {{s.uni}}</p>
+            <p class="card-text"><strong>Titre:</strong> {{s.titre}}</p>
+            
+          </div>
+        </div>
+        {%endfor%}
+</div>
+</div>
+
+{%endblock%}

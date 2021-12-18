@@ -1,0 +1,67 @@
+
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Evénements</strong><hr class="line"> </h3>
+
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+  <h5>Catégories des événements</h5>
+    
+  <div class="card" style="width: 18rem;">
+    {%for c in categ%}
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{c.titre}}</li>
+      </ul>
+      {%endfor%}
+    </div>
+</div>
+<div class="rightside"> <br><br>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb"style="background-color:white;">
+        <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+        <li class="breadcrumb-item active" aria-current="page"> Evennement</li>
+      </ol>
+    </nav>
+  <h1>{{eventsrs.titre}}</h1><hr>
+  <h5>Commence le : {{eventsrs.date_debut}}</h5>
+  <p>lieu: {{eventsrs.lieu}}</p>
+
+  <p class="card-text"><small class="text-muted">{{eventsrs.description|safe}}</small></p>
+  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Reservation
+</button>
+</div>
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reservez maintenant</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nombre de personne:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Envouyez</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{%endblock%}

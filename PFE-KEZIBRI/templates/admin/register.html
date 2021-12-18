@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% include "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content%}
+<h1>S'inscrire - ADMIN</h1><br>
+<form action="/admin/register" method="post">
+  <dl>
+    {{ wtf.quick_form(form)}}
+    <input type="submit" value="Submit">
+  </dl>
+  
+  <a href="/admin/login"><button type="button" class="btn btn-primary" >Se connecter</button></a>
+</form>
+
+{%endblock%}

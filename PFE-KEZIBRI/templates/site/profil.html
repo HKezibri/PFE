@@ -1,0 +1,72 @@
+{% extends "navfooter.html" %}
+{% include "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{%block page%}
+<div class="column tab p-0" style="padding-top: 0px;">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Mon Compte</strong><hr class="line"> </h3>
+
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Mon Compte</h5>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Profil</li>
+          <li class="list-group-item">Changer mot de passe</li>
+          <a href="/evennement/liste-reservation"><li class="list-group-item">My Booking</li></a>
+          <a href="{{url_for('deconn')}}"><li class="list-group-item">Se deconnecter</li></a>
+        </ul>
+      </div>
+</div>
+<div class="rightside"> <br><br>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb"style="background-color:white;">
+          <li class="breadcrumb-item" ><a href="#" ><i class="fas fa-home"> </i> Acceuil</a></li>
+          <li class="breadcrumb-item active" aria-current="page"> Mon compte</li>
+        </ol>
+      </nav>
+
+      <h3 class="px-2"> Mon Profile</h3>
+      {% include '_alertmsg.html'%}
+     <!-- <div class="ctn">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="Fullname">Full name</label>
+                    <input name="fullname" class="form-control" id="inputFullName" aria-describedby="emailHelp" placeholder="Enter full name">
+                    <small id="fullName" class="form-text text-muted">Please enter your full name(First name and Last name)</small>
+            </div>
+            <div class="form-group">
+                    <label for="InputEmail">Email address</label>
+                    <input name="email" class="form-control" id="InputEmail"  placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input type="password" name="password1" class="form-control" id="InputPassword" placeholder="Password">
+            </div>
+            
+                <div class="form-group">
+                <label for="InputPassword2">Repeat Password</label>
+                <input type="password" name="password2" class="form-control" id="InputPassword2" placeholder="Repeat Password">
+            
+                </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-primary" href="" role="button">Login</a>
+            
+            
+            </form>
+        </div>-->
+        {%block content%} 
+        <div class="container">
+          <form method="POST" action="/s'inscrire">
+             <dl>
+             {{ wtf.quick_form(form)}}
+              <input class="btn btn-primary" type="submit" value="update">
+              </dl>
+          </form>
+      </div>
+</div>
+    
+      {%endblock%}
+{%endblock%}

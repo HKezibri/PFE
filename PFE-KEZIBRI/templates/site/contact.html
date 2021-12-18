@@ -1,0 +1,22 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / Contact</strong><hr class="line"> </h3>
+
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+  <h5>Catégories des événements</h5>
+    
+  <div class="card" style="width: 18rem;">
+    {%for c in categ%}
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{c.titre}}</li>
+      </ul>
+      {%endfor%}
+    </div>
+</div>
+<div class="rightside"> <br><br>
+</div>
+
+{%endblock%}

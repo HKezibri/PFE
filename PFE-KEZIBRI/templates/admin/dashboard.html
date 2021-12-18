@@ -1,0 +1,153 @@
+{% extends "dash.html" %}
+{% block content %}
+<!--<h1>Dashboard</h1>
+<p>You are currently logged in as {{ name }}</p>
+<a href='/logout'>Logout</a>-->
+
+ <!-- Begin Page Content -->
+ <div class="container-fluid px-lg-4">
+    <div class="row">
+        <div class="col-md-12 mt-lg-4 mt-4">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Tableau de Bord</h1>
+            
+        </div>
+      </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body" style="background-color: #3178b4;">
+                                            <i class="fas fa-file fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_categs}}</h1>
+                                                <h6 class="text-white">catégories répertoriées</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/categories"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>											
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body " style="background-color: #59b759;">
+                                            <i class="far fa-calendar-alt fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_events}}</h1>
+                                                <h6 class="text-white">Total des événements</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/events"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span></a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body" style="background-color: #edab4a;">
+                                            <i class="fas fa-user fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_users}}</h1>
+                                                <h6 class="text-white">Total des utilisateurs inscrit</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/registred-users"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body " style="background-color: #d6524d;">
+                                            <i class="fas fa-book fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_eq}}</h1>
+                                                <h6 class="text-white" >Equipe d'organisation</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/equipe-organisation"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span></a>											
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body" style="background-color: #59b759;">
+                                            <i class="fas fa-book fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_date}}</h1>
+                                                <h6 class="text-white" > Date importante</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/date-importante"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>	
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body" style="background-color: #d6524d;">
+                                            <i class="fas fa-book fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_speaker}}</h1>
+                                                <h6 class="text-white" >Speakers</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/speakers"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>	
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body" style="background-color: #3178b4;">
+                                            <i class="fas fa-male fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_csi}}</h1>
+                                                <h6 class="text-white" >Comité scientifique international</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/committe-scientifique-international"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>	
+                                <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-body"style="background-color: #edab4a;">
+                                            <i class="fas fa-male fa-7x"></i>
+                                            <div class="mb-1 one">
+                                                <h1 class="text-white">{{nbr_csn}}</h1>
+                                                <h6 class="text-white" >Comité scientifique national</h6>													
+                                            </div>
+                                            <div class="mb-1 two">
+                                                <hr>
+                                                <a href="/admin/committe-scientifique-national"><span class="text-white"> Voir details <i class="fas fa-angle-right"></i></span>	</a>
+                                            </div>
+                                        </div>
+                                    </div>	
+                                </div>				
+                            </div>
+                        </div>
+
+
+ 
+                                   
+
+    </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+
+{%endblock%}

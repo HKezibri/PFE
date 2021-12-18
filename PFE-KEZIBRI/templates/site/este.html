@@ -1,0 +1,230 @@
+{%extends "navfooter.html"%}
+{%block page%}
+<div class="column tab p-0">
+    <img src="/static/assets/tableau.jpg" alt="">
+    <h3 class="heading "><strong>Acceuil / ESTE</strong><hr class="line"> </h3>
+</div>
+<div class="leftside-one"><br><br><br><br><br><br>
+    <h5>Catégories des événements</h5>
+    
+    <div class="card" style="width: 18rem;">
+      {%for c in categ%}
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{c.titre}}</li>
+        </ul>
+        {%endfor%}
+      </div>
+</div>
+<div class="rightside"> <br><br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb"style="background-color:white;">
+      <li class="breadcrumb-item" ><a href="/" ><i class="fas fa-home"> </i> Acceuil</a></li>
+      <li class="breadcrumb-item active" aria-current="page"> ESTE</li>
+    </ol>
+  </nav>
+  <p class="MsoNormal"><b><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">1) Présentation de l’école supérieure de technologie d’Essaouira : <o:p></o:p></span></b></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">L’École Supérieure de Technologie d’Essaouira (ESTE) est une
+    institution d'enseignement supérieur public marocain. <o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">Cette école forme des techniciens supérieurs dans les différentes
+    spécialités techniques. À l'issue de leurs diplômes, les lauréats peuvent
+    poursuivre leurs études dans les différentes écoles d'ingénieurs marocaines ou
+    les écoles de commerce. <o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">Les EST sont les premières écoles qui ont intégré le DUT au Maroc.<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">&nbsp;Les activités
+    para-universitaires de L’ESTE visent à intégrer l’étudiant dans son
+    environnement universitaire. Elles ont un parcours de découverte, de plaisir,
+    d’accomplissement et d’épanouissement où l’étudiant développe davantage ses
+    aptitudes et sa créativité. <o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">Les communications, les ateliers et les exposés aident l’étudiant à
+    développer la communication orale. Les journées d’intégration, les portes
+    ouvertes et des tournois de mini-foot et de basketball, des conférences-débats
+    sur des thématiques diverses (santé, tourisme des ateliers d’arts plastiques,
+    du théâtre, de la vidéo, ainsi que des excursions, des journées d’intégration
+    et portes ouvertes permettent à l’étudiant d’aiguiser sa curiosité pour se
+    construire une culture solide, L’Ecole organise aussi des manifestations
+    innovatrices, tel que ‘SCD’ « SPRING CODING DAYS », elle a déjà organisé 6
+    éditions de cette compétition nationale en développement informatique.<o:p></o:p></span></p><p class="MsoNormal"><b><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">2) Les formations offertes par l’école supérieure de technologie
+    d’Essaouira : <span style="color:#548DD4;mso-themecolor:text2;mso-themetint:
+    153"><o:p></o:p></span></span></b></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">Comme toutes les écoles supérieures de technologie. L’ESTE offre
+    une formation qui s’étale sur la durée de deux ans formant ainsi des
+    techniciens supérieurs titulaires d’un Diplôme Universitaire de Technologie
+    (DUT) et dotés de compétences professionnelles et des aptitudes personnelles
+    qui leurs promettant de s’insérer facilement dans la vie active. <o:p></o:p></span></p><p class="MsoNormal"><b><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">Les DUT disponibles sont :</span></b><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi"> <o:p></o:p></span></p><p class="MsoListParagraphCxSpFirst" style="margin-left:.75in;mso-add-space:auto;
+    text-indent:-.25in;mso-list:l0 level1 lfo1;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Techniques de Management Option :
+    Finance, Comptabilité, Fiscalité (F.C.F).<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l0 level1 lfo1;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Energies Renouvelables Option :
+    Energies Renouvelables.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l0 level1 lfo1;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Génie Informatique Option : Génie
+    logiciel/Réseaux.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:.75in;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l0 level1 lfo1;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Gestion des Organisations et des
+    Destinations Touristiques Option : Gestion Touristique et Hôtelière.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Génie d’environnement.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Informatique décisionnelle et de
+    science de données (IDSD).<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">DUT Gestion des Organisations et des
+    Destinations Touristiques Option : Gestion Touristique et Hôtelière.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">L’ESTE offre également la possibilité
+    d’acquérir des licences professionnelles dont on cite :<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Energies Renouvelables et Développement
+    Durable (ER2D).<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Ingénierie des Systèmes Informatiques et
+    Logiciels (ISIL)<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Management Bancaire et Financier (MBF)<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Modélisation et Gestion de
+    l’Environnement (MGE)<o:p></o:p></span></p><p class="MsoListParagraphCxSpLast" style="margin-left:53.4pt;mso-add-space:auto;
+    text-indent:-.25in;mso-list:l2 level1 lfo2;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Wingdings;mso-fareast-font-family:
+    Wingdings;mso-bidi-font-family:Wingdings">Ø<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp; </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Management du Tourisme (MT).<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">&nbsp;Aussi que la formation
+    continue qui est dispensée à l’Université CADI AYYAD, l’Ecole Supérieure de
+    Technologie d’Essaouira lance <b>deux formations continues :<o:p></o:p></b></span></p><p class="MsoListParagraphCxSpFirst" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l1 level1 lfo3;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">LICENCE PROFESSIONNELLE D'UNIVERSITE : Systèmes
+    d’Information et Gestion d’Entreprise.<o:p></o:p></span></p><p class="MsoListParagraphCxSpLast" style="margin-left:53.4pt;mso-add-space:auto;
+    text-indent:-.25in;mso-list:l1 level1 lfo3;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">MASTER D'UNIVERSITE : Systèmes d’Information,
+    Management et Innovation Technologique.<o:p></o:p></span></p><p class="MsoNormal"><span style="font-size:12.0pt;
+    line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:minor-bidi;
+    mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+    minor-bidi">&nbsp;<b>3) Les services de l’ESTE
+    :<o:p></o:p></b></span></p><p class="MsoListParagraphCxSpFirst" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service de planification :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi"> est chargé de planifier et organiser la
+    production des différentes unités en fonction des commandes et des délais de
+    réalisation.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service de Communication :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi"> Ce service est chargé de concevoir et de
+    coordonner, en liaison avec les différents services de l’institution,
+    l'ensemble des actions de communication vers le public, les médias ainsi que
+    les différents partenaires. <o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service de recherche et coopération :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi"> est chargé de ce qui concerne le
+    laboratoire de recherche les documents des chercheurs les coopérations
+    interuniversitaires.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service du sport :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi"> Ce service est responsable des
+    admissions et des activités para-universitaire. <o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="margin-left:53.4pt;mso-add-space:
+    auto;text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service de finance :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi"> Ce service est chargé de vérifier les
+    différents documents financiers, évaluer les besoins de financement et faire le
+    suivi du budget et de la trésorerie.<o:p></o:p></span></p><p>
+    
+  
+    
+    </p><p class="MsoListParagraphCxSpLast" style="margin-left:53.4pt;mso-add-space:auto;
+    text-indent:-.25in;mso-list:l3 level1 lfo4;tab-stops:446.25pt"><!--[if !supportLists]--><span style="font-size:12.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+    Symbol;mso-bidi-font-family:Symbol;mso-bidi-font-weight:bold">·<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span></span><!--[endif]--><span dir="LTR"></span><b><span style="font-size:
+    12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-theme-font:
+    minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:Arial;
+    mso-bidi-theme-font:minor-bidi">Service informatique :</span></b><span style="font-size:12.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+    mso-ascii-theme-font:minor-bidi;mso-hansi-theme-font:minor-bidi;mso-bidi-font-family:
+    Arial;mso-bidi-theme-font:minor-bidi">Ce service est chargé d’une part de
+    l’Installation et du le paramétrage des équipements informatiques, logiciels,
+    réseaux et télécoms, Supervision et dépannage de tout système informatique
+    intégré à l’Etablissement, D’autre part, le suivi et l’évaluation des projets,
+    application et outils informatiques.<b><o:p></o:p></b></span></p>
+</div>
+{%endblock%}

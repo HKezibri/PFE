@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if titrep %}
+            <title>{{ titrep }}</title>
+        {% else %}
+        <title>ESTE</title>
+        {% endif %}
+        <!---Font Awesome CDN-->
+        <script src="https://kit.fontawesome.com/78d1bc9340.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Custom Stylesheet CSS-->
+        <link rel='stylesheet' href='/static/css/home.css'/>
+       
+        <link rel="stylesheet" href="/static/css/style.css">
+        
+    </head>
+    <body>
+        <div class="container-content">
+            <div class="row">
+              <div class="column text-center logo-este ">
+                <img src="/static/assets/logo0.PNG" class='l1' alt="">
+              </div>
+              <div class="column p-0 menuu ">
+                
+                <nav class="navbar sticky-top navbar-expand-lg navbar-light bgnavclr " >
+                    <div class="container-fluid">
+                     <!-- <a class="navbar-brand" href="#"><i class="fas fa-home"></i>Acceuil</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>-->
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link "  href="/"><i class="fas fa-home"></i> Acceuil</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link "  href="/pageESTE">ESTE</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/evennement">Evénements</a>
+                          </li>
+                      
+                          <li class="nav-item">
+                            <a class="nav-link" href="/speakers">Speakers</a>
+                          </li>
+       
+                          <li class="nav-item">
+                            <a class="nav-link" href="/eq-organisation">Equipe d'organisation</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/date-importante">Date Importantes</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/comite">Comite Scientifique</a>
+                          </li>
+                          {% if current_user.is_authenticated %}
+                          <li class="nav-item">
+                            <a class="nav-link" href="/moncompte">Mon compte</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/se-deconnecter">Se deconnecter</a>
+                          </li>
+                         
+                          {% else %}
+                          <li class="nav-item">
+                            <a class="nav-link" href="/se-connecter">se connecter</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/s'inscrire">s'inscrire</a>
+                          </li>
+                         
+                          {% endif %}
+
+                          <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              se connecter
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              {% if current_user.is_authenticated %}
+                              
+                              <li><a class="dropdown-item" href="/se-deconnecter">{{current_user.email}}</a></li> 
+                              <li><a class="dropdown-item" href="/se-deconnecter">Se deconnecter</a></li>
+                             
+                              {% else %}
+                              <li><a class="dropdown-item" href="/s'inscrire">S'inscrire</a></li>
+                              <li><a class="dropdown-item" href="/se-connecter">Se connecter</a></li>
+                              {% endif %}
+                             
+                         
+                            </ul>
+                          </li>--->
+                          
+                        </ul>
+                       <!-- <form class="d-flex">
+                          <input class="form-control me-2" type="search" placeholder="Recherche..." aria-label="Search" >
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                        </form>-->
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            
+        {%block page%}
+        {%endblock%}
+
+
+        
+                <!-- footer -->
+                <div class="footer">
+                    <div class="footer-content">
+      
+                      <div class="footer-section about"><br><br>
+                        <h1 class="logo-text"><span>E</span>cole <span>S</span>uprieure de <span>T</span>echnologie d'<span>E</span>ssaouira</h1>
+                        
+                      </div>
+                      <div class="footer-section about">
+                        
+                        <div class="contact">
+                          <h2>Contact</h2><br>
+                          <span><i class="fas fa-phone"></i> &nbsp; (+212) 5 24 79 20 64 , (+212) 5 24 79 26 48</span>
+                          <span><i class="fas fa-envelope"></i> &nbsp; este@uca.ac.ma</span>
+                        </div>
+                        <div class="socials">
+                          <a href="https://www.facebook.com/groups/este.essaouira/"><i class="fab fa-facebook"></i></a>
+                          <a href="https://www.youtube.com/channel/UCloTMIRgKAuWgJicBOlMsxQ"><i class="fab fa-youtube"></i></a>
+                        </div>
+                      </div>
+                      <div class="footer-section about"><br><br>
+                        <p>
+                          Km 9, Route d'Agadir, Essaouira Aljadida BP. 383, Essaouira 
+                        </p>
+                       <!--Google map-->
+                       <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.7239946379614!2d-9.733638685370954!3d31.449264557797505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdad9aaf09fd97d3%3A0x46dca5f5d7fd7be8!2s%C3%89cole%20sup%C3%A9rieure%20de%20technologie%20d&#39;Essaouira!5e0!3m2!1sfr!2sus!4v1616976476386!5m2!1sfr!2sus"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      </div>
+      
+                    <!--Google Maps-->
+                      </div>
+      
+                      <div class="footer-section links">
+                        <h2>Liens Rapides</h2>
+                        <br>
+                        <ul>
+                          <a href="/evennement">
+                            <li>Evennements</li>
+                          </a>
+                          <a href="/eq-organisation">
+                            <li>Equipe d'organisation</li>
+                          </a>
+                          <a href="/speakers">
+                            <li>Speakers</li>
+                          </a>
+                          <a href="/se-connecter">
+                            <li>Se connecter</li>
+                          </a>
+                          
+                        </ul>
+                      </div>
+      
+                      
+      
+                    </div>
+      
+                    <div class="footer-bottom">
+                      &copy; Copyright | PFE 2021
+                      
+                    </div>
+                  </div>
+                  <!-- // footer -->
+                    
+                 
+                  
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>  
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+          <script>
+              $(document).ready(function() {
+          $("#calendar").fullCalendar();
+                          });
+          </script>
+          <script>
+            var myModal = document.getElementById('myModal')
+          var myInput = document.getElementById('myInput')
+  
+          myModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+          })
+        </script>
+          </body>
+      </html>

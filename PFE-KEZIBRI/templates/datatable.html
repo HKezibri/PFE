@@ -1,0 +1,283 @@
+
+
+          <!--  <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                
+                
+               
+                
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </tfoot>
+          -->   
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
+    <!-- Bootstrap CSS -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">  
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	    <!--fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <link rel="stylesheet" href="/static/css/dbtab.css">
+		
+		<link rel="stylesheet" href="font/font/flaticon.css">
+        <link rel="stylesheet" href="/static/css/admin.css">
+
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
+
+         
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+        <title>ccc</title>
+        {% endif %}
+
+  </head>
+  
+  <body>
+  
+  
+  <div id="wrapper">
+   <div class="overlay">
+    
+        <!-- Sidebar -->
+    <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
+       <div class="simplebar-content" style="padding: 0px;">
+			<a class="sidebar-brand" href="/"><span class="text-center">Evénement Scientifiques</span>
+                <h6>Aller au site</h6><hr></a>
+
+			<ul class="navbar-nav align-self-stretch">
+	 
+                					
+                <li class=""> 
+                    <a class="nav-link text-left "  role="button" href="{{url_for('tableau_bord')}}" aria-haspopup="true" aria-expanded="false">
+                        <i class="flaticon-bar-chart-1"><i class="fas fa-tachometer-alt"></i></i>
+                        <span class="text-white">Tableau de bord </span>  
+                    </a>
+                </li>
+	 
+               
+                <li class=""> 
+                    <a class="nav-link text-left " href="" role="button" >
+                        <i class="flaticon-bar-chart-1"></i> 
+                        <span class="text-white">  categories  </span> 
+                    </a>
+                </li>
+		 
+                    
+                   
+                <li class=""> 
+                    <a class="nav-link text-left " href="{{ url_for('prg') }}" role="button" >
+                        <i class="flaticon-bar-chart-1"></i> 
+                        <span class="text-white">  Evénements  </span> 
+                    </a>
+                </li>
+		 
+		 
+		
+		    <li class=""> 
+                <a class="nav-link text-left" href="#" role="button" >
+                    <i class="flaticon-bar-chart-1"></i> 
+                    <span class="text-white">  Speakers </span>
+                </a>
+		  </li>
+		    
+          <li class=""> 
+            <a class="nav-link text-left" href="#" role="button" >
+                <i class="flaticon-bar-chart-1"></i>   
+                <span class="text-white"> Paramètres </span>
+            </a>
+		  </li>
+          <li class=""> 
+            <a class="nav-link text-left" href="#" role="button" >
+                <i class="flaticon-bar-chart-1"><i class="fas fa-sign-out-alt"></i></i> 
+                <span class="text-white"> Se deconnecter  </span> 
+            </a>
+		  </li>
+		  </ul>
+
+				
+			</div>
+	   
+	   
+    </nav>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+			<div id="content">
+
+            <div class="container-fluid p-0 px-lg-0 px-md-0">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light my-navbar">
+                
+            <!-- Sidebar Toggle (Topbar) -->
+                <div type="button"  id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <img src="/static/assets/logow00.PNG" id='este-logo' alt="">
+            <!-- Topbar Search -->
+          
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav navtop ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            
+            <!-- Nav Item - User Information -->
+            <!-- Example split danger button -->
+            <div class="dropdown px-lg-4 " style="background-color: white;"> 
+                <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white;">
+                     <i class="far fa-user"></i>  {{email}}
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Profil</a></li><hr>
+                  <li><a class="dropdown-item" href="/admin/logout">Se deconnecter</a></li>
+                  
+                </ul>
+              </div>
+              <!--<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">nom user</span>
+                <i class="fas fa-user"></i>
+              </a>-->
+
+        </ul>
+
+
+        </nav>
+    
+        <!-- End of Topbar -->
+        
+        <!------------------->
+        
+    <div class="container" style="background-color: white;">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            {% block title %}
+        {%endblock%}
+        </table>
+        
+    </div>
+			
+    {% block content %}
+    {%endblock%}	
+			
+        
+			
+			
+			
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="index.html" class="text-muted"><strong>Ecole suprieure de Technologie d'Essaouira | Universite Cadi Ayyad Marrakech Maroc</strong></a> &copy
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="footer-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="footer-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="footer-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="footer-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			
+        </div>
+		</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+  
+  
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/static/js/dbtab.js"></script>
+    
+
+    <script>
+ 
+        $('#bar').click(function(){
+            $(this).toggleClass('open');
+            $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled' );
+        
+        });
+          </script>
+    <script>
+        $(document).ready(function() {
+    $('#example').DataTable();
+} );
+    </script>
+    
+    
+  
+
+
+  
+  
+  </body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+          <html lang="en">
+            <head>
+              <!-- Required meta tags -->
+              <meta charset="utf-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              
+              <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">-->
+          
+              <!-- google fonts -->
+              <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">  
+              <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+             <!--fontawesome-->
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+                
+              <!--CSS-->
+              <link rel="stylesheet" href="font/font/flaticon.css">
+              <link rel="stylesheet" href="/static/css/admin.css">
+        
+                  
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />                                    
+                  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />                  
+                  <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+                  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">          
+                  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">            
+                  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+                  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+                  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script> 
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.js"></script>
+                  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+                  <script src="/static/js/spkr.js"></script>
+                   
+                  {% if title %}
+                      <title>{{ title }}</title>
+                  {% else %}
+                  <title>ccc</title>
+                  {% endif %}
+          
+            </head>
+            
+            <body>
+            
+            
+            <div id="wrapper">
+             <div class="overlay">
+              
+                  <!-- Sidebar -->
+              <nav class="fixed-top align-top" id="sidebar-wrapper" role="navigation">
+                 <div class="simplebar-content" style="padding: 0px;">
+                      <a class="sidebar-brand" href="/"><span class="text-center">Evénement Scientifiques</span>
+                          <h6>Aller au site</h6><hr></a>
+          
+                      <ul class="navbar-nav align-self-stretch">
+               
+                                              
+                          <li class=""> 
+                              <a class="nav-link text-left "  role="button" href="/admin/dashboard" aria-haspopup="true" aria-expanded="false">
+                                  <i class="flaticon-bar-chart-1"><i class="fas fa-tachometer-alt"></i></i>
+                                  <span class="text-white">Tableau de bord </span>  
+                              </a>
+                          </li>
+               
+                         
+                          <li class=""> 
+                            <a class="nav-link text-left " href="/admin/categories" role="button" >
+                                <i class="flaticon-bar-chart-1"></i> 
+                                <span class="text-white">  categories  </span> 
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a class="nav-link text-left " href="/admin/events" role="button" >
+                                <i class="flaticon-bar-chart-1"></i> 
+                                <span class="text-white">  Evénements  </span> 
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a class="nav-link text-left " href=" /admin/speakers" role="button" >
+                                <i class="flaticon-bar-chart-1"></i> 
+                                <span class="text-white"> Speakers </span> 
+                            </a>
+                        </li>
+                 
+                        <li class=""> 
+                            <a class="nav-link text-left " href="/admin/equipe-organisation" role="button" >
+                                <i class="flaticon-bar-chart-1"></i> 
+                                <span class="text-white"> Equipe d'organisation </span> 
+                            </a>
+                        </li>
+                        <li class=""> 
+                            <a class="nav-link text-left " href="/admin/date-importante" role="button" >
+                                <i class="flaticon-bar-chart-1"></i> 
+                                <span class="text-white"> Dates importantes </span> 
+                            </a>
+                        </li>
+                       
+                    <li class=""> 
+                        <a class="nav-link text-left" href="/admin/committe-scientifique-national" role="button" >
+                            <i class="flaticon-bar-chart-1"></i> 
+                            <span class="text-white"> Comité scientifique national </span>
+                        </a>
+                  </li>
+                  <li class=""> 
+                    <a class="nav-link text-left" href="/admin/committe-scientifique-international" role="button" >
+                        <i class="flaticon-bar-chart-1"></i> 
+                        <span class="text-white"> Comité scientifique international</span>
+                    </a>
+              </li>
+              <li class=""> 
+                <a class="nav-link text-left" href="/admin/reservation" role="button" >
+                    <i class="flaticon-bar-chart-1"></i>   
+                    <span class="text-white"> Reservation </span>
+                </a>
+              </li> 
+                    
+                  <li class=""> 
+                    <a class="nav-link text-left" href="/admin/slide-parametre" role="button" >
+                        <i class="flaticon-bar-chart-1"></i>   
+                        <span class="text-white"> Paramètres </span>
+                    </a>
+                  </li>
+                    <li class=""> 
+                      <a class="nav-link text-left" href="/admin/logout" role="button" >
+                          <i class="flaticon-bar-chart-1"><i class="fas fa-sign-out-alt"></i></i> 
+                          <span class="text-white"> Se deconnecter  </span> 
+                      </a>
+                    </li>
+                    </ul>
+          
+                          
+                      </div>
+                 
+                 
+              </nav>
+                  <!-- /#sidebar-wrapper -->
+                  <!-- Page Content -->
+                  <div id="page-content-wrapper">
+                      <div id="content">
+          
+                      <div class="container-fluid p-0 px-lg-0 px-md-0">
+                      <!-- Topbar -->
+                      <nav class="navbar navbar-expand navbar-light my-navbar">
+                          
+                      <!-- Sidebar Toggle (Topbar) -->
+                          <div type="button"  id="bar" class="nav-icon1 hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                          <span></span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                          
+                          <img src="/static/assets/logow00.PNG" id='este-logo' alt="">
+                      <!-- Topbar Search -->
+                    
+          
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav navtop ml-auto">
+          
+                      <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                      
+                      <!-- Nav Item - User Information -->
+                      <!-- Example split danger button -->
+                      <div class="dropdown px-lg-4 " style="background-color: white;"> 
+                          <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: white;">
+                               <i class="far fa-user"></i>  {{name}}
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            
+                            <li><a class="dropdown-item" href="/admin/logout">Se deconnecter</a></li>
+                            
+                          </ul>
+                        </div>
+                        <!--<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                          <span class="mr-2 d-none d-lg-inline text-gray-600 small">nom user</span>
+                          <i class="fas fa-user"></i>
+                        </a>-->
+          
+                  </ul>
+          
+          
+                  </nav>
+              
+                  <!-- End of Topbar -->
+                  
+                  <!------------------->
+                  
+                  <div class="container mb-3 mt-3"><br><br><br>
+                    <div class="table-title">
+                        <h2>Speakers</b></h2>
+                    </div>
+                    <br />
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Ajouter une nouvelle personne
+                        </button>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="table">
+                                <table id="sample_data" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Profession</th>
+                                            <th>Nom complet</th>
+                                            <th>Universite</th>
+                                            <th>Titre</th>
+                                            <th>action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for row in spekr %}
+                                        <tr>
+                                            <td data-pk="{{row.id}}" id="pk">{{row.id}}</td>
+                                            <td data-name="titre" class="titre" data-type="text" data-pk="{{row.id}}">{{row.profession}}</td>
+                                            <td data-name="titre" class="titre" data-type="text" data-pk="{{row.id}}">{{row.nom}}</td>
+                                            <td data-name="titre" class="titre" data-type="text" data-pk="{{row.id}}">{{row.universite}}</td>
+                                            <td data-name="titre" class="titre" data-type="text" data-pk="{{row.id}}">{{row.titre}}</td>
+                                            <td><a href="javascript:del('{{row.id}}','{{row.titre}}')" class="btn btn-primary">Delete</a></td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                     
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content" >
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter une nouvelle personne</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body" >
+                <form role="form" method="post" action="/admin/add-speaker">
+                  <div class="form-group">
+                    <label class="col-form-label">Profession</label>
+                    <input type="text" class="form-control" id="txttitre1" name="txttitre1" value="">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Nom complet</label>
+                    <input type="text" class="form-control" id="txttitre2" name="txttitre2" value="">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Universite</label>
+                    <input type="text" class="form-control" id="txttitre3" name="txttitre3" value="">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Titre</label>
+                    <input type="text" class="form-control" id="txttitre4" name="txttitre4" value="">
+                  </div>
+                  
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input name="cmdsubmit" class="btn btn-primary" type="submit" value="Submit" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+                </div>
+               
+                <br />
+                <br />
+                      
+                  
+                      
+                      
+                      
+                      <footer class="footer">
+                          <div class="container-fluid">
+                              <div class="row text-muted">
+                                  <div class="col-6 text-left">
+                                      <p class="mb-0">
+                                          <a href="index.html" class="text-muted"><strong>Ecole suprieure de Technologie d'Essaouira | Universite Cadi Ayyad Marrakech Maroc</strong></a> &copy
+                                      </p>
+                                  </div>
+                                  <div class="col-6 text-right">
+                                      <ul class="list-inline">
+                                          <li class="footer-item">
+                                              <a class="text-muted" href="/admin/dashboard"> Retour au tableau de bord</a>
+                                          </li>
+                                          <li class="footer-item">
+                                              <a class="text-muted" href="#"></a>
+                                          </li>
+                                          <li class="footer-item">
+                                              <a class="text-muted" href="#"></a>
+                                          </li>
+                                          <li class="footer-item">
+                                              <a class="text-muted" href="#"></a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </footer>
+                      
+                  </div>
+                  </div>
+                  <!-- /#page-content-wrapper -->
+          
+              </div>
+              <!-- /#wrapper -->
+            
+            
+          
+          
+          
+              <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+              <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+          
+             
+              
+          
+              <script>
+           
+                  $('#bar').click(function(){
+                      $(this).toggleClass('open');
+                      $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled' );
+                  
+                  });
+                    </script>
+              
+              
+              
+            
+          
+          
+            
+            
+            </body>
+          </html>
